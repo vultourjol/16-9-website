@@ -4,6 +4,7 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
+  overflow-y: scroll;
 }
 
 body {

@@ -1,18 +1,18 @@
 1:"$Sreact.fragment"
-2:I[47257,["/_next/static/chunks/2hkzgo0ul-58b.js"],"ClientPageRoot"]
-3:I[29306,["/_next/static/chunks/2hkzgo0ul-58b.js","/_next/static/chunks/09hh84-mmku6h.js"],"default"]
-6:I[97367,["/_next/static/chunks/2hkzgo0ul-58b.js"],"OutletBoundary"]
+2:I[47257,["/_next/static/chunks/1ccxlspbr0nwr.js"],"ClientPageRoot"]
+3:I[29306,["/_next/static/chunks/1ccxlspbr0nwr.js","/_next/static/chunks/09hh84-mmku6h.js"],"default"]
+6:I[97367,["/_next/static/chunks/1ccxlspbr0nwr.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
-b:I[97367,["/_next/static/chunks/2hkzgo0ul-58b.js"],"ViewportBoundary"]
-c:I[97367,["/_next/static/chunks/2hkzgo0ul-58b.js"],"MetadataBoundary"]
-e:I[39756,["/_next/static/chunks/2hkzgo0ul-58b.js"],"default"]
-f:I[37457,["/_next/static/chunks/2hkzgo0ul-58b.js"],"default"]
-12:I[66605,["/_next/static/chunks/2hkzgo0ul-58b.js"],"LanguageProvider"]
-:HL["/_next/static/chunks/2ovv8m5vaovp8.css","style"]
+b:I[97367,["/_next/static/chunks/1ccxlspbr0nwr.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/1ccxlspbr0nwr.js"],"MetadataBoundary"]
+e:I[39756,["/_next/static/chunks/1ccxlspbr0nwr.js"],"default"]
+f:I[37457,["/_next/static/chunks/1ccxlspbr0nwr.js"],"default"]
+12:I[66605,["/_next/static/chunks/1ccxlspbr0nwr.js"],"LanguageProvider"]
+:HL["/_next/static/chunks/3udhuo22rwcoi.css","style"]
 a:X
 11:X
 11:C
-0:{"buildId":"fe0LWtvgV7YJvU73CZX1d","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/09hh84-mmku6h.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"16/9 Творческая мастерская"}],["$","meta","1",{"name":"description","content":"Профессиональная видеостудия. Создаём рекламные ролики, корпоративные фильмы, проводим live-трансляции и занимаемся профессиональным монтажом."}]]}]}]}],null]}],"isPartial":"$@d","staleTime":"$a","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}]}]]}],"isPartial":"$@10","staleTime":"$a","varyParams":"$11"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2ovv8m5vaovp8.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/2hkzgo0ul-58b.js","async":true}]],["$","html",null,{"lang":"ru","children":["$","body",null,{"className":"bg-white text-zinc-900 antialiased","children":["$","$L12",null,{"children":["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}],"notFound":[["$","$L3",null,{}],[]]}]}]}]}]]}],"isPartial":"$@13","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
+0:{"buildId":"M9XmbZVW8H1U5RpqGG0pn","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/09hh84-mmku6h.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"16/9 Творческая мастерская"}],["$","meta","1",{"name":"description","content":"Профессиональная видеостудия. Создаём рекламные ролики, корпоративные фильмы, проводим live-трансляции и занимаемся профессиональным монтажом."}]]}]}]}],null]}],"isPartial":"$@d","staleTime":"$a","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}]}]]}],"isPartial":"$@10","staleTime":"$a","varyParams":"$11"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/3udhuo22rwcoi.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/1ccxlspbr0nwr.js","async":true}]],["$","html",null,{"lang":"ru","children":["$","body",null,{"className":"bg-white text-zinc-900 antialiased","children":["$","$L12",null,{"children":["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}],"notFound":[["$","$L3",null,{}],[]]}]}]}]}]]}],"isPartial":"$@13","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
 4:{}
 5:"$0:data:0:rsc:props:children:0:props:serverProvidedParams:params"
 8:null
