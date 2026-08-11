@@ -124,7 +124,7 @@ const ru = {
         title1: "Мы создаём",
         title2: "визуальные",
         title3: "истории",
-        desc: "16/9 — команда профессионалов, влюблённых в своё дело. Мы превращаем идеи в кинематографичные образы, которые остаются в памяти.",
+        desc: "— команда профессионалов, влюблённых в своё дело. Мы превращаем идеи в кинематографичные образы, которые остаются в памяти.",
         stats: [
             {
                 value: "200+",
@@ -281,7 +281,7 @@ const en = {
         title1: "We create",
         title2: "visual",
         title3: "stories",
-        desc: "16/9 is a team of professionals in love with their craft. We turn ideas into cinematic images that stay in your memory.",
+        desc: "is a team of professionals in love with their craft. We turn ideas into cinematic images that stay in your memory.",
         stats: [
             {
                 value: "200+",
