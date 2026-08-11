@@ -1,18 +1,20 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
-const navItems = [
-  { label: "Главная", href: "#hero" },
-  { label: "О студии", href: "#about" },
-  { label: "Шоурум", href: "#showreel" },
-  { label: "Контакты", href: "#contact" },
-];
+const navHrefs = ["#hero", "#about", "#showreel", "#contact"];
 
 export default function Header() {
+  const { lang, setLang, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const navItems = t.header.nav.map((label, i) => ({
+    label,
+    href: navHrefs[i],
+  }));
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
@@ -48,7 +50,7 @@ export default function Header() {
           <button
             onClick={() => scrollTo("#hero")}
             className="flex items-center gap-2 group"
-            aria-label="На главную"
+            aria-label={t.header.ariaLogo}
           >
             <div className="w-7 h-7 bg-zinc-900 rounded-sm flex items-center justify-center group-hover:scale-95 transition-transform duration-200">
               <svg
@@ -72,7 +74,7 @@ export default function Header() {
                 scrolled ? "text-zinc-900" : "text-white"
               }`}
             >
-              16/9 ТВОРЧЕСКАЯ МАСТЕРСКАЯ
+              {t.header.logo}
             </span>
           </button>
 
@@ -91,30 +93,49 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Burger */}
-          <button
-            onClick={() => setMenuOpen((v) => !v)}
-            className={`md:hidden flex flex-col gap-1.5 w-6 h-5 justify-center items-center group transition-colors ${
-              scrolled ? "text-zinc-900" : "text-white"
-            }`}
-            aria-label={menuOpen ? "Закрыть меню" : "Открыть меню"}
-          >
-            <span
-              className={`block h-0.5 bg-current transition-all duration-300 origin-center ${
-                menuOpen ? "w-5 rotate-45 translate-y-2" : "w-5"
+          <div className="flex items-center gap-3">
+            {/* Language switch */}
+            <button
+              onClick={() => setLang(lang === "ru" ? "en" : "ru")}
+              className={`text-xs tracking-widest font-medium uppercase border px-3 py-2 transition-all duration-300 ${
+                scrolled
+                  ? "text-zinc-900 border-zinc-900 hover:bg-zinc-900 hover:text-white"
+                  : "text-white border-white/40 hover:bg-white hover:text-zinc-950"
               }`}
-            />
-            <span
-              className={`block h-0.5 bg-current transition-all duration-300 ${
-                menuOpen ? "opacity-0 w-0" : "w-4"
+              aria-label={
+                lang === "ru" ? "Switch to English" : "Переключить на русский"
+              }
+            >
+              {t.header.langLabel}
+            </button>
+
+            {/* Burger */}
+            <button
+              onClick={() => setMenuOpen((v) => !v)}
+              className={`md:hidden flex flex-col gap-1.5 w-6 h-5 justify-center items-center group transition-colors ${
+                scrolled ? "text-zinc-900" : "text-white"
               }`}
-            />
-            <span
-              className={`block h-0.5 bg-current transition-all duration-300 origin-center ${
-                menuOpen ? "w-5 -rotate-45 -translate-y-2" : "w-5"
-              }`}
-            />
-          </button>
+              aria-label={
+                menuOpen ? t.header.ariaMenuClose : t.header.ariaMenuOpen
+              }
+            >
+              <span
+                className={`block h-0.5 bg-current transition-all duration-300 origin-center ${
+                  menuOpen ? "w-5 rotate-45 translate-y-2" : "w-5"
+                }`}
+              />
+              <span
+                className={`block h-0.5 bg-current transition-all duration-300 ${
+                  menuOpen ? "opacity-0 w-0" : "w-4"
+                }`}
+              />
+              <span
+                className={`block h-0.5 bg-current transition-all duration-300 origin-center ${
+                  menuOpen ? "w-5 -rotate-45 -translate-y-2" : "w-5"
+                }`}
+              />
+            </button>
+          </div>
         </div>
       </header>
 

@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -44,21 +46,21 @@ export default function HeroSection() {
         className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"
       >
         <p className="text-xs tracking-[0.4em] uppercase text-zinc-400 mb-6 animate-fade-in-up animation-delay-200">
-          Профессиональная видеостудия
+          {t.hero.kicker}
         </p>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-extralight text-white leading-none tracking-tight mb-6 animate-fade-in-up animation-delay-400">
-          Каждый кадр —<br />
-          <span className="italic font-light">история</span>
+          {t.hero.title1}
+          <br />
+          <span className="italic font-light">{t.hero.title2}</span>
         </h1>
         <p className="text-base md:text-lg text-zinc-300 font-light max-w-xl leading-relaxed mb-12 animate-fade-in-up animation-delay-600">
-          Видеопроизводство, прямые трансляции и монтаж для брендов, которые
-          хотят быть услышанными.
+          {t.hero.desc}
         </p>
         <button
           onClick={scrollToAbout}
           className="group animate-fade-in-up animation-delay-800 inline-flex items-center gap-3 border border-white/30 hover:border-white text-white text-xs tracking-[0.25em] uppercase px-8 py-4 transition-all duration-300 hover:bg-white hover:text-zinc-950"
         >
-          Узнать больше
+          {t.hero.cta}
           <svg
             className="w-3 h-3 group-hover:translate-x-1 transition-transform duration-300"
             fill="none"
@@ -78,7 +80,7 @@ export default function HeroSection() {
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-fade-in-up animation-delay-1000">
         <span className="text-[10px] tracking-[0.3em] uppercase text-zinc-500">
-          Скролл
+          {t.hero.scroll}
         </span>
         <div className="w-px h-12 bg-gradient-to-b from-zinc-500 to-transparent animate-scroll-line" />
       </div>

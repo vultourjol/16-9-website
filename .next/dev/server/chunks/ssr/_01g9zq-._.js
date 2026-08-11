@@ -17,7 +17,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 const metadata = {
-    title: "Frame Studio — Видеопроизводство, Live-трансляции, Монтаж",
+    title: "16/9 Творческая мастерская",
     description: "Профессиональная видеостудия. Создаём рекламные ролики, корпоративные фильмы, проводим live-трансляции и занимаемся профессиональным монтажом."
 };
 function RootLayout({ children }) {

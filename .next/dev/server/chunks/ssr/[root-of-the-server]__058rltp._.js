@@ -171,20 +171,47 @@ function Footer() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "flex gap-6",
+                    className: "flex gap-6 mt-4 md:mt-0",
                     children: [
-                        "Политика конфиденциальности",
-                        "Договор оферты"
-                    ].map((l)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "#",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "/privacy-policy.pdf",
                             className: "text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-300 transition-colors duration-200",
-                            children: l
-                        }, l, false, {
+                            children: "Политика конфиденциальности"
+                        }, void 0, false, {
                             fileName: "[project]/src/components/Footer.tsx",
-                            lineNumber: 13,
-                            columnNumber: 13
-                        }, this))
-                }, void 0, false, {
+                            lineNumber: 12,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "/not-found.tsx",
+                            className: "text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-300 transition-colors duration-200",
+                            children: "Договор оферты"
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/Footer.tsx",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                            href: "https://vultourjol.github.io/my-portfolio-website/",
+                            className: "text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-300 transition-colors duration-200",
+                            children: [
+                                "накодил ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-bold",
+                                    children: "vultourjol"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/components/Footer.tsx",
+                                    lineNumber: 28,
+                                    columnNumber: 21
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/Footer.tsx",
+                            lineNumber: 24,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
                     fileName: "[project]/src/components/Footer.tsx",
                     lineNumber: 11,
                     columnNumber: 9
@@ -230,13 +257,11 @@ const __TURBOPACK__default__export__ = (0, __TURBOPACK__imported__module__$5b$pr
     throw new Error("Attempted to call the default export of [project]/src/components/Header.tsx <module evaluation> from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.");
 }, "[project]/src/components/Header.tsx <module evaluation>", "default");
 }),
-"[project]/src/components/Header.tsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
-"use strict";
+"[project]/src/components/Header.tsx [app-rsc] (ecmascript)", ((__turbopack_context__, module, exports) => {
 
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__$3c$module__evaluation$3e$__ = __turbopack_context__.i("[project]/src/components/Header.tsx [app-rsc] (client reference proxy) <module evaluation>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__ = __turbopack_context__.i("[project]/src/components/Header.tsx [app-rsc] (client reference proxy)");
-;
-__turbopack_context__.n(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$Header$2e$tsx__$5b$app$2d$rsc$5d$__$28$client__reference__proxy$29$__);
+var e = new Error("Could not parse module '[project]/src/components/Header.tsx'\n\nExpected '</', got 'jsx text'");
+e.code = 'MODULE_UNPARSABLE';
+throw e;
 }),
 "[project]/src/components/HeroSection.tsx [app-rsc] (client reference proxy)", ((__turbopack_context__) => {
 "use strict";

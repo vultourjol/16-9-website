@@ -1,16 +1,26 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useLanguage } from "@/i18n/LanguageProvider";
 
-const services = [
-  "Видеопроизводство",
-  "Live-трансляция",
-  "Монтаж и постпродакшн",
-  "Фотосъёмка",
-  "Комплексный проект",
-];
+function formatPhone(input: string) {
+  if (!input) return "";
+  const digits = input.replace(/\D/g, "");
+  const first = digits[0];
+  let d =
+    first === "7" || first === "8" ? digits.slice(1) : digits;
+  d = d.slice(0, 10);
+
+  let result = "+7";
+  if (d.length > 0) result += ` (${d.slice(0, 3)}`;
+  if (d.length > 3) result += `) ${d.slice(3, 6)}`;
+  if (d.length > 6) result += `-${d.slice(6, 8)}`;
+  if (d.length > 8) result += `-${d.slice(8, 10)}`;
+  return result;
+}
 
 export default function ContactSection() {
+  const { t } = useLanguage();
   const headRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
 
@@ -31,10 +41,10 @@ export default function ContactSection() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            (entry.target as HTMLElement).classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
+          (entry.target as HTMLElement).classList.toggle(
+            "is-visible",
+            entry.isIntersecting
+          );
         });
       },
       { threshold: 0.1 }
@@ -48,7 +58,11 @@ export default function ContactSection() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: name === "phone" ? formatPhone(value) : value,
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -79,37 +93,40 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-zinc-950 py-32 md:py-40 overflow-hidden"
+      className="bg-zinc-950 py-24 md:py-40 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
           {/* Left: info */}
           <div ref={headRef} className="reveal-block">
             <p className="text-xs tracking-[0.4em] uppercase text-zinc-500 mb-4">
-              Контакты
+              {t.contact.kicker}
             </p>
             <h2 className="text-4xl md:text-6xl font-extralight text-white leading-tight mb-10">
-              Давайте<br />
-              <em className="font-light not-italic text-zinc-500">создадим</em>
+              {t.contact.title1}
               <br />
-              вместе
+              <em className="font-light italic text-zinc-500">
+                {t.contact.title2}
+              </em>
+              <br />
+              {t.contact.title3}
             </h2>
 
             <div className="space-y-8 mb-16">
               <div>
                 <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-2">
-                  Email
+                  {t.contact.email}
                 </p>
                 <a
                   href="mailto:hello@16/9studio.ru"
                   className="text-lg text-zinc-300 hover:text-white transition-colors duration-200 font-light"
                 >
-                  hello@16.9studio.ru
+                  hello@16x9studio.ru
                 </a>
               </div>
               <div>
                 <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-2">
-                  Телефон
+                  {t.contact.phone}
                 </p>
                 <a
                   href="tel:+79001234567"
@@ -120,19 +137,20 @@ export default function ContactSection() {
               </div>
               <div>
                 <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-2">
-                  Адрес
+                  {t.contact.address}
                 </p>
                 <p className="text-lg text-zinc-300 font-light">
-                  Москва, ул. Порядковый переулок, д. 21
+                  {t.contact.addressValue}
                 </p>
               </div>
               <div>
                 <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-2">
-                  Режим работы
+                  {t.contact.hours}
                 </p>
                 <p className="text-lg text-zinc-300 font-light">
-                  Пн – Пт: 10:00 — 19:00<br />
-                  Сб: по договорённости
+                  {t.contact.hoursValue1}
+                  <br />
+                  {t.contact.hoursValue2}
                 </p>
               </div>
             </div>
@@ -140,13 +158,13 @@ export default function ContactSection() {
             {/* Social */}
             <div>
               <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-4">
-                Мы в сети
+                {t.contact.social}
               </p>
               <div className="flex gap-4">
                 {["VK", "TG", "YT"].map((s) => (
                   <a
                     key={s}
-                    href="#"
+                    href="/not-found.tsx"
                     className="w-14 h-14 border border-zinc-700 flex items-center justify-center text-[14px] tracking-widest text-zinc-500 hover:border-zinc-400 hover:text-zinc-300 transition-all duration-200"
                   >
                     {s}
@@ -176,30 +194,29 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-extralight text-white">
-                  Сообщение отправлено
+                  {t.contact.form.successTitle}
                 </h3>
                 <p className="text-sm text-zinc-500 font-light leading-relaxed">
-                  Спасибо за обращение! Мы свяжемся с вами в течение рабочего
-                  дня.
+                  {t.contact.form.successDesc}
                 </p>
                 <button
                   onClick={() => setStatus("idle")}
                   className="text-xs tracking-[0.25em] uppercase text-zinc-500 hover:text-zinc-300 transition-colors duration-200 border-b border-zinc-700 pb-px"
                 >
-                  Отправить ещё
+                  {t.contact.form.sendAnother}
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <p className="text-xs tracking-[0.3em] uppercase text-zinc-500 mb-8">
-                  Форма обратной связи
+                  {t.contact.form.kicker}
                 </p>
 
                 {/* Name + Email */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="group">
                     <label className="block text-[14px] tracking-[0.25em] uppercase text-zinc-300 mb-2">
-                      Имя *
+                      {t.contact.form.name}
                     </label>
                     <input
                       type="text"
@@ -207,13 +224,13 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      placeholder="Иван Иванов"
+                      placeholder={t.contact.form.namePh}
                       className="w-full bg-transparent border-b border-zinc-700 focus:border-zinc-400 text-white text-md font-light py-3 outline-none transition-colors duration-200 placeholder:text-zinc-600"
                     />
                   </div>
                   <div className="group">
                     <label className="block text-[14px] tracking-[0.25em] uppercase text-zinc-300 mb-2">
-                      Email *
+                      {t.contact.form.email}
                     </label>
                     <input
                       type="email"
@@ -221,7 +238,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      placeholder="ivan@example.com"
+                      placeholder={t.contact.form.emailPh}
                       className="w-full bg-transparent border-b border-zinc-700 focus:border-zinc-400 text-white text-md font-light py-3 outline-none transition-colors duration-200 placeholder:text-zinc-600"
                     />
                   </div>
@@ -231,20 +248,20 @@ export default function ContactSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[14px] tracking-[0.25em] uppercase text-zinc-300 mb-2">
-                      Телефон
+                      {t.contact.form.phone}
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+7 (999) 000-00-00"
+                      placeholder={t.contact.form.phonePh}
                       className="w-full bg-transparent border-b border-zinc-700 focus:border-zinc-400 text-white text-md font-light py-3 outline-none transition-colors duration-200 placeholder:text-zinc-600"
                     />
                   </div>
                   <div>
                     <label className="block text-[14px] tracking-[0.25em] uppercase text-zinc-300 mb-2">
-                      Услуга
+                      {t.contact.form.service}
                     </label>
                     <select
                       name="service"
@@ -253,9 +270,9 @@ export default function ContactSection() {
                       className="w-full bg-zinc-950 border-b border-zinc-700 focus:border-zinc-400 text-white text-md font-light py-3 outline-none transition-colors duration-200 appearance-none cursor-pointer"
                     >
                       <option value="" className="text-zinc-600">
-                        Выберите услугу
+                        {t.contact.form.servicePh}
                       </option>
-                      {services.map((s) => (
+                      {t.contact.form.services.map((s) => (
                         <option key={s} value={s} className="bg-zinc-900">
                           {s}
                         </option>
@@ -266,15 +283,15 @@ export default function ContactSection() {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-[10px] tracking-[0.25em] uppercase text-zinc-300 mb-2">
-                    Сообщение *
+                  <label className="block text-[14px] tracking-[0.25em] uppercase text-zinc-300 mb-2">
+                    {t.contact.form.message}
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    placeholder="Расскажите о вашем проекте..."
+                    placeholder={t.contact.form.messagePh}
                     rows={4}
                     className="w-full bg-transparent border-b border-zinc-700 focus:border-zinc-400 text-white text-md font-light py-3 outline-none transition-colors duration-200 placeholder:text-zinc-600 resize-none"
                   />
@@ -315,11 +332,11 @@ export default function ContactSection() {
                             d="M4 12a8 8 0 018-8v8z"
                           />
                         </svg>
-                        Отправка...
+                        {t.contact.form.sending}
                       </>
                     ) : (
                       <>
-                        Отправить заявку
+                        {t.contact.form.submit}
                         <svg
                           className="w-3 h-3"
                           fill="none"
