@@ -168,7 +168,7 @@ export default function AboutSection() {
           <div ref={imgRef} className="reveal-block-right">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/7292783/pexels-photo-7292783.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=700&w=600"
+                src="/images/camera.webp"
                 alt="Камера в студии"
                 className="w-full h-[480px] object-cover grayscale"
               />
