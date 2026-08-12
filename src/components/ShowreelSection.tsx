@@ -76,7 +76,7 @@ function ItemModal({
       role="dialog"
       aria-modal="true"
       aria-label={item.label}
-      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-zinc-950/90 ${
+      className={`fixed inset-0 z-100 flex items-center justify-center p-4 md:p-8 bg-zinc-950/90 ${
         closing ? "animate-overlay-out" : "animate-overlay-in"
       }`}
     >
@@ -111,7 +111,7 @@ function ItemModal({
           closing ? "animate-modal-out" : "animate-modal-in"
         }`}
       >
-        <div className="relative overflow-hidden bg-zinc-100 aspect-[4/3] md:aspect-video">
+        <div className="relative overflow-hidden bg-zinc-100 aspect-4/3 md:aspect-video">
           <PlaceholderPattern />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <div className="w-16 h-16 border border-zinc-300 rounded-full flex items-center justify-center bg-white/60 backdrop-blur-sm">
@@ -235,7 +235,7 @@ function PlaceholderCard({
       </div>
 
       {/* Bottom label */}
-      <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-gradient-to-t from-zinc-200/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+      <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-linear-to-t from-zinc-200/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
         <span className="text-sm font-light text-zinc-700">{label}</span>
         <span className="text-[10px] tracking-[0.2em] uppercase text-zinc-500 border border-zinc-300 px-2 py-0.5">
           {tag}
@@ -264,7 +264,7 @@ export default function ShowreelSection() {
   }, []);
 
   return (
-    <section id="showreel" className="bg-zinc-50 py-24 md:py-40 overflow-hidden">
+    <section id="showreel" className="bg-white py-24 md:py-40 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div ref={headRef} className="reveal-block mb-16">

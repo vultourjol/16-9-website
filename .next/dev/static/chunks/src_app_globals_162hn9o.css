@@ -91,6 +91,7 @@
     --color-zinc-800: #27272a;
     --color-zinc-900: #18181b;
     --color-zinc-950: #09090b;
+    --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
     --container-xs: 20rem;
@@ -497,7 +498,7 @@
     z-index: 50;
   }
 
-  .z-\[100\] {
+  .z-100, .z-\[100\] {
     z-index: 100;
   }
 
@@ -585,7 +586,7 @@
     display: inline-flex;
   }
 
-  .aspect-\[4\/3\] {
+  .aspect-4\/3, .aspect-\[4\/3\] {
     aspect-ratio: 4 / 3;
   }
 
@@ -655,6 +656,10 @@
 
   .w-0 {
     width: calc(var(--spacing) * 0);
+  }
+
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
 
   .w-3 {
@@ -729,7 +734,7 @@
     flex: 1;
   }
 
-  .flex-shrink-0 {
+  .flex-shrink-0, .shrink-0 {
     flex-shrink: 0;
   }
 
@@ -976,6 +981,10 @@
     border-color: var(--color-zinc-900);
   }
 
+  .bg-black {
+    background-color: var(--color-black);
+  }
+
   .bg-current {
     background-color: currentColor;
   }
@@ -1032,6 +1041,34 @@
     .bg-zinc-950\/90 {
       background-color: color-mix(in oklab, var(--color-zinc-950) 90%, transparent);
     }
+  }
+
+  .bg-linear-to-b {
+    --tw-gradient-position: to bottom;
+  }
+
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    .bg-linear-to-b {
+      --tw-gradient-position: to bottom in oklab;
+    }
+  }
+
+  .bg-linear-to-b {
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+
+  .bg-linear-to-t {
+    --tw-gradient-position: to top;
+  }
+
+  @supports (background-image: linear-gradient(in lab, red, red)) {
+    .bg-linear-to-t {
+      --tw-gradient-position: to top in oklab;
+    }
+  }
+
+  .bg-linear-to-t {
+    background-image: linear-gradient(var(--tw-gradient-stops));
   }
 
   .bg-gradient-to-b {
@@ -1339,6 +1376,10 @@
     letter-spacing: var(--tracking-widest);
   }
 
+  .text-black {
+    color: var(--color-black);
+  }
+
   .text-red-400 {
     color: var(--color-red-400);
   }
@@ -1409,6 +1450,10 @@
 
   .opacity-0 {
     opacity: 0;
+  }
+
+  .opacity-1 {
+    opacity: .01;
   }
 
   .opacity-25 {
@@ -1586,6 +1631,12 @@
   @media (hover: hover) {
     .hover\:text-white:hover {
       color: var(--color-white);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:text-zinc-100:hover {
+      color: var(--color-zinc-100);
     }
   }
 
@@ -1796,6 +1847,7 @@
 html {
   scroll-behavior: smooth;
   overscroll-behavior-y: none;
+  overflow-y: scroll;
 }
 
 body {

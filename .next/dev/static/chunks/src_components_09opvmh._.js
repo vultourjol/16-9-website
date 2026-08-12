@@ -235,7 +235,7 @@ function AboutSection() {
                                         },
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "mt-1 flex-shrink-0 text-zinc-400 group-hover:text-zinc-900 transition-colors duration-300",
+                                                className: "mt-1 shrink-0 text-zinc-400 group-hover:text-zinc-900 transition-colors duration-300",
                                                 children: serviceIcons[i]
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AboutSection.tsx",
@@ -1113,7 +1113,7 @@ function Footer() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                            href: "https://vultourjol.github.io/my-portfolio-website/",
+                            href: "https://vultourjol-website.vercel.app/",
                             className: "text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-300 transition-colors duration-200",
                             children: [
                                 t.footer.credits,
@@ -1229,7 +1229,7 @@ function Header() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-                className: `fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-white/90 backdrop-blur-md border-b border-zinc-100 shadow-sm" : "bg-transparent"}`,
+                className: `fixed top-0 left-0 right-0 z-50 bg-black transition-all duration-500 ${scrolled ? "bg-white backdrop-blur-md border-b border-zinc-100 shadow-sm" : "bg-transparent"}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "max-w-7xl mx-auto px-6 h-16 flex items-center justify-between",
                     children: [
@@ -1372,7 +1372,7 @@ function Header() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 ref: menuRef,
-                className: `fixed inset-0 z-40 bg-zinc-950 flex flex-col items-center justify-center transition-all duration-500 md:hidden ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`,
+                className: `fixed inset-0 z-40 bg-white flex flex-col items-center justify-center transition-all duration-500 md:hidden ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                     className: "flex flex-col items-center gap-10",
                     children: navItems.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1380,7 +1380,7 @@ function Header() {
                             style: {
                                 transitionDelay: menuOpen ? `${i * 60}ms` : "0ms"
                             },
-                            className: `text-2xl font-light tracking-widest uppercase text-white hover:text-zinc-400 transition-all duration-300 ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`,
+                            className: `text-2xl font-light tracking-widest uppercase text-zinc-900 hover:text-zinc-400 transition-all duration-300 ${menuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`,
                             children: item.label
                         }, item.href, false, {
                             fileName: "[project]/src/components/Header.tsx",
@@ -1478,7 +1478,7 @@ function HeroSection() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 bg-gradient-to-b from-zinc-950/60 via-zinc-950/20 to-zinc-950/80"
+                        className: "absolute inset-0 bg-linear-to-b from-zinc-950/60 via-zinc-950/20 to-zinc-950/80"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroSection.tsx",
                         lineNumber: 40,
@@ -1582,7 +1582,7 @@ function HeroSection() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-px h-12 bg-gradient-to-b from-zinc-500 to-transparent animate-scroll-line"
+                        className: "w-px h-12 bg-linear-to-b from-zinc-500 to-transparent animate-scroll-line"
                     }, void 0, false, {
                         fileName: "[project]/src/components/HeroSection.tsx",
                         lineNumber: 85,
@@ -1717,7 +1717,7 @@ function ItemModal({ item, onClose }) {
         role: "dialog",
         "aria-modal": "true",
         "aria-label": item.label,
-        className: `fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8 bg-zinc-950/90 ${closing ? "animate-overlay-out" : "animate-overlay-in"}`,
+        className: `fixed inset-0 z-100 flex items-center justify-center p-4 md:p-8 bg-zinc-950/90 ${closing ? "animate-overlay-out" : "animate-overlay-in"}`,
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                 onClick: startClose,
@@ -1758,7 +1758,7 @@ function ItemModal({ item, onClose }) {
                 className: `w-full max-w-4xl ${closing ? "animate-modal-out" : "animate-modal-in"}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative overflow-hidden bg-zinc-100 aspect-[4/3] md:aspect-video",
+                        className: "relative overflow-hidden bg-zinc-100 aspect-4/3 md:aspect-video",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(PlaceholderPattern, {}, void 0, false, {
                                 fileName: "[project]/src/components/ShowreelSection.tsx",
@@ -1969,7 +1969,7 @@ function PlaceholderCard({ label, tag, extraClass = "", isVideo = false, onClick
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-gradient-to-t from-zinc-200/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300",
+                className: "absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between bg-linear-to-t from-zinc-200/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                         className: "text-sm font-light text-zinc-700",
@@ -2030,7 +2030,7 @@ function ShowreelSection() {
     }["ShowreelSection.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "showreel",
-        className: "bg-zinc-50 py-24 md:py-40 overflow-hidden",
+        className: "bg-white py-24 md:py-40 overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-7xl mx-auto px-6",

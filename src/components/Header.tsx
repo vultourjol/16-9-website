@@ -39,9 +39,9 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 bg-black transition-all duration-500 ${
           scrolled
-            ? "bg-white/90 backdrop-blur-md border-b border-zinc-100 shadow-sm"
+            ? "bg-white backdrop-blur-md border-b border-zinc-100 shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -142,7 +142,7 @@ export default function Header() {
       {/* Mobile menu overlay */}
       <div
         ref={menuRef}
-        className={`fixed inset-0 z-40 bg-zinc-950 flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 z-40 bg-white flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
           menuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -154,7 +154,7 @@ export default function Header() {
               key={item.href}
               onClick={() => scrollTo(item.href)}
               style={{ transitionDelay: menuOpen ? `${i * 60}ms` : "0ms" }}
-              className={`text-2xl font-light tracking-widest uppercase text-white hover:text-zinc-400 transition-all duration-300 ${
+              className={`text-2xl font-light tracking-widest uppercase text-zinc-900 hover:text-zinc-400 transition-all duration-300 ${
                 menuOpen
                   ? "translate-y-0 opacity-100"
                   : "translate-y-4 opacity-0"

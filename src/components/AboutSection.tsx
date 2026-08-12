@@ -127,7 +127,7 @@ export default function AboutSection() {
                 className="group border-t border-zinc-900 py-8 flex gap-6 hover:bg-zinc-100 transition-colors duration-300 px-2 -mx-2"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
-                <div className="mt-1 flex-shrink-0 text-zinc-400 group-hover:text-zinc-900 transition-colors duration-300">
+                <div className="mt-1 shrink-0 text-zinc-400 group-hover:text-zinc-900 transition-colors duration-300">
                   {serviceIcons[i]}
                 </div>
                 <div>

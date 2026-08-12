@@ -37,7 +37,7 @@ export default function HeroSection() {
           alt="Видеопроизводство"
           className="w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/60 via-zinc-950/20 to-zinc-950/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-zinc-950/60 via-zinc-950/20 to-zinc-950/80" />
       </div>
 
       {/* Content */}
@@ -82,7 +82,7 @@ export default function HeroSection() {
         <span className="text-[10px] tracking-[0.3em] uppercase text-zinc-500">
           {t.hero.scroll}
         </span>
-        <div className="w-px h-12 bg-gradient-to-b from-zinc-500 to-transparent animate-scroll-line" />
+        <div className="w-px h-12 bg-linear-to-b from-zinc-500 to-transparent animate-scroll-line" />
       </div>
     </section>
   );
