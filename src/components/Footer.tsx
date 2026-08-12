@@ -27,7 +27,7 @@ export default function Footer() {
             {t.footer.offer}
           </a>
           <a
-            href="https://vultourjol.github.io/my-portfolio-website/"
+            href="https://vultourjol-website.vercel.app/"
             className="text-[10px] tracking-widest uppercase text-zinc-500 hover:text-zinc-300 transition-colors duration-200"
           >
             {t.footer.credits} <span className="font-bold text-zinc-300">vultourjol</span>
