@@ -35,6 +35,19 @@ export default function ContactSection() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [copied, setCopied] = useState(false);
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const copyAddress = async () => {
+    try {
+      await navigator.clipboard.writeText(t.contact.addressValue);
+      setCopied(true);
+      if (copyTimer.current) clearTimeout(copyTimer.current);
+      copyTimer.current = setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
+  };
 
   useEffect(() => {
     const els = [headRef.current, formRef.current].filter(Boolean);
@@ -50,7 +63,10 @@ export default function ContactSection() {
       { threshold: 0.1 }
     );
     els.forEach((el) => el && observer.observe(el));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (copyTimer.current) clearTimeout(copyTimer.current);
+    };
   }, []);
 
   const handleChange = (
@@ -93,7 +109,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="bg-zinc-950 py-24 md:py-40 overflow-hidden"
+      className="bg-zinc-950 py-16 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-16 md:gap-24">
@@ -119,9 +135,22 @@ export default function ContactSection() {
                 </p>
                 <a
                   href="mailto:hello@16/9studio.ru"
-                  className="text-lg text-zinc-300 hover:text-white transition-colors duration-200 font-light"
+                  className="group inline-flex items-center gap-2 text-lg text-zinc-300 hover:text-white transition-colors duration-200 font-light"
                 >
                   hello@16x9studio.ru
+                  <svg
+                    className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
                 </a>
               </div>
               <div>
@@ -130,18 +159,91 @@ export default function ContactSection() {
                 </p>
                 <a
                   href="tel:+79001234567"
-                  className="text-lg text-zinc-300 hover:text-white transition-colors duration-200 font-light"
+                  className="group inline-flex items-center gap-2 text-lg text-zinc-300 hover:text-white transition-colors duration-200 font-light"
                 >
                   +7 (900) 123-45-67
+                  <svg
+                    className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors duration-200"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
                 </a>
               </div>
               <div>
                 <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-2">
                   {t.contact.address}
                 </p>
-                <p className="text-lg text-zinc-300 font-light">
-                  {t.contact.addressValue}
-                </p>
+                <div
+                  onClick={copyAddress}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      copyAddress();
+                    }
+                  }}
+                  aria-label={copied ? t.contact.copied : t.contact.copy}
+                  title={copied ? t.contact.copied : t.contact.copy}
+                  className={`group inline-flex items-center gap-3 cursor-pointer transition-colors duration-200 ${
+                    copied ? "text-white" : ""
+                  }`}
+                >
+                  <p className="text-lg text-zinc-300 group-hover:text-white transition-colors duration-200 font-light">
+                    {t.contact.addressValue}
+                  </p>
+                  <span
+                    className={`shrink-0 flex items-center justify-center transition-all duration-200 ${
+                      copied
+                        ? "text-white"
+                        : "text-zinc-500 group-hover:text-zinc-300"
+                    }`}
+                  >
+                    {copied ? (
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="11"
+                          height="11"
+                          rx="2"
+                          strokeWidth={1.5}
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"
+                          strokeWidth={1.5}
+                        />
+                      </svg>
+                    )}
+                  </span>
+                </div>
               </div>
               <div>
                 <p className="text-[14px] tracking-[0.3em] uppercase text-zinc-500 mb-2">

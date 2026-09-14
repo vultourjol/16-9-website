@@ -1,15 +1,14 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageProvider";
 
-const navHrefs = ["#hero", "#about", "#showreel", "#contact"];
+const navHrefs = ["#hero", "#about", "#showreel", "#partners", "#faq", "#contact"];
 
 export default function Header() {
   const { lang, setLang, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
 
   const navItems = t.header.nav.map((label, i) => ({
     label,
@@ -29,6 +28,13 @@ export default function Header() {
     document.addEventListener("keydown", handleKey);
     return () => document.removeEventListener("keydown", handleKey);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   const scrollTo = (href: string) => {
     setMenuOpen(false);
@@ -78,22 +84,67 @@ export default function Header() {
             </span>
           </button>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <button
-                key={item.href}
-                onClick={() => scrollTo(item.href)}
-                className={`text-xs font-medium tracking-widest uppercase transition-colors duration-300 hover:opacity-60 ${
-                  scrolled ? "text-zinc-800" : "text-white/90"
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
-
           <div className="flex items-center gap-3">
+            {/* Sections */}
+            <button
+              onClick={() => setMenuOpen((v) => !v)}
+              className={`flex items-center gap-2 text-xs tracking-widest font-medium uppercase border px-4 py-2 transition-all duration-300 ${
+                scrolled
+                  ? "text-zinc-900 border-zinc-900 hover:bg-zinc-900 hover:text-white"
+                  : "text-white border-white/40 hover:bg-white hover:text-zinc-950"
+              }`}
+              aria-label={
+                menuOpen ? t.header.ariaMenuClose : t.header.ariaMenuOpen
+              }
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="shrink-0"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="5"
+                  height="5"
+                  rx="1"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <rect
+                  x="8"
+                  y="1"
+                  width="5"
+                  height="5"
+                  rx="1"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <rect
+                  x="1"
+                  y="8"
+                  width="5"
+                  height="5"
+                  rx="1"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+                <rect
+                  x="8"
+                  y="8"
+                  width="5"
+                  height="5"
+                  rx="1"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+              </svg>
+              {t.header.navLabel}
+            </button>
+
             {/* Language switch */}
             <button
               onClick={() => setLang(lang === "ru" ? "en" : "ru")}
@@ -108,53 +159,61 @@ export default function Header() {
             >
               {t.header.langLabel}
             </button>
-
-            {/* Burger */}
-            <button
-              onClick={() => setMenuOpen((v) => !v)}
-              className={`md:hidden flex flex-col gap-1.5 w-6 h-5 justify-center items-center group transition-colors ${
-                scrolled ? "text-zinc-900" : "text-white"
-              }`}
-              aria-label={
-                menuOpen ? t.header.ariaMenuClose : t.header.ariaMenuOpen
-              }
-            >
-              <span
-                className={`block h-0.5 bg-current transition-all duration-300 origin-center ${
-                  menuOpen ? "w-5 rotate-45 translate-y-2" : "w-5"
-                }`}
-              />
-              <span
-                className={`block h-0.5 bg-current transition-all duration-300 ${
-                  menuOpen ? "opacity-0 w-0" : "w-4"
-                }`}
-              />
-              <span
-                className={`block h-0.5 bg-current transition-all duration-300 origin-center ${
-                  menuOpen ? "w-5 -rotate-45 -translate-y-2" : "w-5"
-                }`}
-              />
-            </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile menu overlay */}
+      {/* Backdrop */}
       <div
-        ref={menuRef}
-        className={`fixed inset-0 z-40 bg-white flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
+        className={`fixed inset-0 z-[60] bg-zinc-950/50 backdrop-blur-sm transition-opacity duration-500 ${
           menuOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
         }`}
+        onClick={() => setMenuOpen(false)}
+        aria-hidden="true"
+      />
+
+      {/* Slide-in menu */}
+      <aside
+        className={`fixed top-0 right-0 z-[70] h-full w-full max-w-sm bg-white shadow-2xl flex flex-col transition-transform duration-500 ease-in-out ${
+          menuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+        aria-hidden={!menuOpen}
       >
-        <nav className="flex flex-col items-center gap-10">
+        <div className="h-16 px-6 border-b border-zinc-100 flex items-center justify-between gap-4 shrink-0">
+          <span className="truncate text-sm font-semibold tracking-widest uppercase text-zinc-900">
+            {t.header.logo}
+          </span>
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label={t.header.ariaMenuClose}
+            className="w-9 h-9 -mr-2 flex items-center justify-center text-zinc-900 hover:opacity-60 transition-opacity"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 5L15 15M15 5L5 15"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <nav className="flex flex-col gap-9 px-6 pt-12">
           {navItems.map((item, i) => (
             <button
               key={item.href}
               onClick={() => scrollTo(item.href)}
               style={{ transitionDelay: menuOpen ? `${i * 60}ms` : "0ms" }}
-              className={`text-2xl font-light tracking-widest uppercase text-zinc-900 hover:text-zinc-400 transition-all duration-300 ${
+              className={`text-left text-2xl font-light tracking-widest uppercase text-zinc-900 hover:text-zinc-400 transition-all duration-300 ${
                 menuOpen
                   ? "translate-y-0 opacity-100"
                   : "translate-y-4 opacity-0"
@@ -164,7 +223,19 @@ export default function Header() {
             </button>
           ))}
         </nav>
-      </div>
+
+        <div className="mt-auto px-6 pt-10 pb-8 border-t border-zinc-100">
+          <button
+            onClick={() => setLang(lang === "ru" ? "en" : "ru")}
+            className="text-xs tracking-widest font-medium uppercase border border-zinc-900 px-4 py-2 text-zinc-900 hover:bg-zinc-900 hover:text-white transition-all duration-300"
+            aria-label={
+              lang === "ru" ? "Switch to English" : "Переключить на русский"
+            }
+          >
+            {t.header.langLabel}
+          </button>
+        </div>
+      </aside>
     </>
   );
 }

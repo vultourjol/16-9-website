@@ -60,11 +60,14 @@ function ItemModal({
       if (e.key === "Escape") startClose();
     };
     document.addEventListener("keydown", handleKey);
-    const prevOverflow = document.body.style.overflow;
+    const prevBodyOverflow = document.body.style.overflow;
+    const prevHtmlOverflow = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", handleKey);
-      document.body.style.overflow = prevOverflow;
+      document.body.style.overflow = prevBodyOverflow;
+      document.documentElement.style.overflow = prevHtmlOverflow;
       if (timerRef.current) clearTimeout(timerRef.current);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -264,7 +267,7 @@ export default function ShowreelSection() {
   }, []);
 
   return (
-    <section id="showreel" className="bg-white py-24 md:py-40 overflow-hidden">
+    <section id="showreel" className="bg-white py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div ref={headRef} className="reveal-block mb-16">
@@ -296,9 +299,16 @@ export default function ShowreelSection() {
                 tag={p.tag}
                 isVideo={layout.isVideo}
                 extraClass={`${layout.aspect} ${layout.span}`}
-                onClick={() =>
-                  setActiveItem({ id: i, label: p.label, tag: p.tag, isVideo: true })
-                }
+                onClick={() => {
+                  if (window.matchMedia("(min-width: 768px)").matches) {
+                    setActiveItem({
+                      id: i,
+                      label: p.label,
+                      tag: p.tag,
+                      isVideo: true,
+                    });
+                  }
+                }}
               />
             );
           })}
@@ -317,9 +327,16 @@ export default function ShowreelSection() {
                 tag={p.tag}
                 extraClass="aspect-[4/3]"
                 isVideo={false}
-                onClick={() =>
-                  setActiveItem({ id: i, label: p.label, tag: p.tag, isVideo: false })
-                }
+                onClick={() => {
+                  if (window.matchMedia("(min-width: 768px)").matches) {
+                    setActiveItem({
+                      id: i,
+                      label: p.label,
+                      tag: p.tag,
+                      isVideo: false,
+                    });
+                  }
+                }}
               />
             ))}
           </div>
