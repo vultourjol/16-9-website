@@ -1,65 +1,12 @@
-{"timestamp":"00:00:00.868","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:09.017","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:43.892","source":"Server","level":"LOG","message":"✓ Compiled in 59ms"}
-{"timestamp":"00:02:05.447","source":"Server","level":"LOG","message":"✓ Compiled in 17ms"}
-{"timestamp":"00:02:17.979","source":"Server","level":"WARN","message":"⚠ Fast Refresh had to perform a full reload due to a runtime error."}
-{"timestamp":"00:02:18.008","source":"Server","level":"LOG","message":"✓ Compiled in 34ms"}
-{"timestamp":"00:02:18.250","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:03:07.273","source":"Server","level":"LOG","message":"✓ Compiled in 18ms"}
-{"timestamp":"00:03:11.263","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:03:15.398","source":"Server","level":"LOG","message":"✓ Compiled in 27ms"}
-{"timestamp":"00:03:28.641","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
-{"timestamp":"00:04:05.076","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
-{"timestamp":"00:04:17.551","source":"Server","level":"LOG","message":"✓ Compiled in 72ms"}
-{"timestamp":"00:04:21.898","source":"Server","level":"LOG","message":"✓ Compiled in 21ms"}
-{"timestamp":"00:04:27.213","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:04:29.064","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
-{"timestamp":"00:04:29.244","source":"Server","level":"LOG","message":"✓ Compiled in 17ms"}
-{"timestamp":"00:04:45.314","source":"Server","level":"LOG","message":"✓ Compiled in 20ms"}
-{"timestamp":"00:05:17.392","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
-{"timestamp":"00:05:20.390","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
-{"timestamp":"00:05:24.299","source":"Server","level":"LOG","message":"✓ Compiled in 29ms"}
-{"timestamp":"00:05:26.770","source":"Server","level":"LOG","message":"✓ Compiled in 29ms"}
-{"timestamp":"00:05:33.311","source":"Server","level":"LOG","message":"✓ Compiled in 29ms"}
-{"timestamp":"00:05:35.347","source":"Server","level":"LOG","message":"✓ Compiled in 34ms"}
-{"timestamp":"00:05:37.763","source":"Server","level":"LOG","message":"✓ Compiled in 41ms"}
-{"timestamp":"00:06:58.022","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:07:40.196","source":"Server","level":"LOG","message":"✓ Compiled in 26ms"}
-{"timestamp":"00:07:57.028","source":"Server","level":"LOG","message":"✓ Compiled in 44ms"}
-{"timestamp":"00:08:47.357","source":"Server","level":"LOG","message":"✓ Compiled in 12ms"}
-{"timestamp":"00:10:38.268","source":"Server","level":"LOG","message":"✓ Compiled in 24ms"}
-{"timestamp":"00:11:12.353","source":"Server","level":"LOG","message":"✓ Compiled in 13ms"}
-{"timestamp":"00:11:21.625","source":"Server","level":"LOG","message":"✓ Compiled in 19ms"}
-{"timestamp":"00:11:32.452","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
-{"timestamp":"00:12:02.548","source":"Server","level":"LOG","message":"✓ Compiled in 37ms"}
-{"timestamp":"00:12:08.679","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:12:41.464","source":"Server","level":"LOG","message":"✓ Compiled in 29ms"}
-{"timestamp":"00:12:43.604","source":"Server","level":"LOG","message":"✓ Compiled in 22ms"}
-{"timestamp":"00:14:07.216","source":"Server","level":"LOG","message":"✓ Compiled in 21ms"}
-{"timestamp":"00:14:08.699","source":"Server","level":"LOG","message":"✓ Compiled in 57ms"}
-{"timestamp":"00:14:13.244","source":"Server","level":"LOG","message":"✓ Compiled in 29ms"}
-{"timestamp":"00:19:22.393","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:19:25.855","source":"Server","level":"LOG","message":"✓ Compiled in 52ms"}
-{"timestamp":"00:19:34.138","source":"Server","level":"LOG","message":"✓ Compiled in 43ms"}
-{"timestamp":"00:19:41.183","source":"Server","level":"LOG","message":"✓ Compiled in 58ms"}
-{"timestamp":"00:20:04.194","source":"Server","level":"LOG","message":"✓ Compiled in 123ms"}
-{"timestamp":"00:20:04.231","source":"Browser","level":"ERROR","message":"./src/components/Header.tsx:46:9\nError: Expected '</', got '}'\n  44 |             ? \"bg-white backdrop-blur-md border-b border-zinc-100 shadow-sm\"\n  45 |             // : \"bg-transparent\"\n> 46 |         }`}\n     |         ^\n  47 |       >\n  48 |         <div className=\"max-w-7xl mx-auto px-6 h-16 flex items-center justify-between\">\n  49 |           {/* Logo */}\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./src/components/Header.tsx\n    ./src/app/page.tsx "}
-{"timestamp":"00:20:04.232","source":"Server","level":"ERROR","message":"[browser] \"./src/components/Header.tsx:46:9\\nError: Expected '</', got '}'\\n  44 |             ? \\\"bg-white backdrop-blur-md border-b border-zinc-100 shadow-sm\\\"\\n  45 |             // : \\\"bg-transparent\\\"\\n> 46 |         }`}\\n     |         ^\\n  47 |       >\\n  48 |         <div className=\\\"max-w-7xl mx-auto px-6 h-16 flex items-center justify-between\\\">\\n  49 |           {/* Logo */}\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./src/components/Header.tsx\\n    ./src/app/page.tsx\" \"\""}
-{"timestamp":"00:20:04.266","source":"Browser","level":"ERROR","message":"./src/components/Header.tsx:46:9\nError: Expected '</', got '}'\n  44 |             ? \"bg-white backdrop-blur-md border-b border-zinc-100 shadow-sm\"\n  45 |             // : \"bg-transparent\"\n> 46 |         }`}\n     |         ^\n  47 |       >\n  48 |         <div className=\"max-w-7xl mx-auto px-6 h-16 flex items-center justify-between\">\n  49 |           {/* Logo */}\n\nParsing ecmascript source code failed\n\nImport trace:\n  Server Component:\n    ./src/components/Header.tsx\n    ./src/app/page.tsx "}
-{"timestamp":"00:20:04.267","source":"Server","level":"ERROR","message":"[browser] \"./src/components/Header.tsx:46:9\\nError: Expected '</', got '}'\\n  44 |             ? \\\"bg-white backdrop-blur-md border-b border-zinc-100 shadow-sm\\\"\\n  45 |             // : \\\"bg-transparent\\\"\\n> 46 |         }`}\\n     |         ^\\n  47 |       >\\n  48 |         <div className=\\\"max-w-7xl mx-auto px-6 h-16 flex items-center justify-between\\\">\\n  49 |           {/* Logo */}\\n\\nParsing ecmascript source code failed\\n\\nImport trace:\\n  Server Component:\\n    ./src/components/Header.tsx\\n    ./src/app/page.tsx\" \"\""}
-{"timestamp":"00:20:14.760","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
-{"timestamp":"00:20:27.097","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
-{"timestamp":"00:20:29.867","source":"Server","level":"LOG","message":"✓ Compiled in 47ms"}
-{"timestamp":"00:20:36.867","source":"Server","level":"LOG","message":"✓ Compiled in 33ms"}
-{"timestamp":"00:23:13.791","source":"Server","level":"LOG","message":"✓ Compiled in 18ms"}
-{"timestamp":"00:23:18.261","source":"Server","level":"LOG","message":"✓ Compiled in 34ms"}
-{"timestamp":"00:23:31.845","source":"Server","level":"LOG","message":"✓ Compiled in 12ms"}
-{"timestamp":"00:23:36.101","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
-{"timestamp":"00:24:05.747","source":"Server","level":"LOG","message":"✓ Compiled in 15ms"}
-{"timestamp":"00:24:09.051","source":"Server","level":"LOG","message":"✓ Compiled in 38ms"}
-{"timestamp":"00:24:26.484","source":"Server","level":"LOG","message":"✓ Compiled in 13ms"}
-{"timestamp":"00:24:28.286","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:25:10.558","source":"Server","level":"LOG","message":"✓ Compiled in 42ms"}
-{"timestamp":"00:25:14.088","source":"Server","level":"LOG","message":"✓ Compiled in 29ms"}
-{"timestamp":"00:25:17.999","source":"Server","level":"LOG","message":"✓ Compiled in 30ms"}
-{"timestamp":"00:25:20.278","source":"Server","level":"LOG","message":"✓ Compiled in 28ms"}
+{"timestamp":"00:00:00.605","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:07.390","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:04:57.508","source":"Server","level":"LOG","message":"✓ Compiled in 168ms"}
+{"timestamp":"00:05:00.094","source":"Server","level":"LOG","message":"✓ Compiled in 43ms"}
+{"timestamp":"00:05:03.227","source":"Server","level":"LOG","message":"✓ Compiled in 45ms"}
+{"timestamp":"00:05:15.673","source":"Server","level":"LOG","message":"✓ Compiled in 47ms"}
+{"timestamp":"00:05:20.298","source":"Server","level":"LOG","message":"✓ Compiled in 39ms"}
+{"timestamp":"00:05:23.916","source":"Server","level":"LOG","message":"✓ Compiled in 25ms"}
+{"timestamp":"00:05:26.806","source":"Server","level":"LOG","message":"✓ Compiled in 51ms"}
+{"timestamp":"00:18:05.689","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:18:08.573","source":"Browser","level":"WARN","message":"Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior"}
+{"timestamp":"00:18:08.622","source":"Server","level":"WARN","message":"[browser] \"\\u001b[33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior=\\\"smooth\\\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior\\u001b[39m\""}

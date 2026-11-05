@@ -100,10 +100,13 @@ __turbopack_context__.s([
 const ru = {
     header: {
         logo: "16/9 ТВОРЧЕСКАЯ МАСТЕРСКАЯ",
+        navLabel: "Разделы",
         nav: [
             "Главная",
             "О студии",
             "Шоурум",
+            "Партнёры",
+            "FAQ",
             "Контакты"
         ],
         ariaLogo: "На главную",
@@ -157,7 +160,174 @@ const ru = {
                 desc: "Профессиональный монтаж, цветокоррекция, звуковое оформление и графика. Ваш контент заиграет новыми красками."
             }
         ],
-        imgAlt: "Камера в студии"
+        imgAlt: "Камера в студии",
+        team: {
+            kicker: "Команда",
+            title1: "Люди за",
+            title2: "кадром",
+            desc: "Каждый проект делает команда профессионалов. Нажмите на роль, чтобы заглянуть на съёмочную площадку.",
+            photoAlt: "Фото с площадки",
+            members: [
+                {
+                    role: "Режиссёр",
+                    desc: "Создаёт концепцию, руководит съёмочной группой и отвечает за смысл каждого кадра."
+                },
+                {
+                    role: "Оператор",
+                    desc: "Свет, композиция и движение камеры — его почерк. Умеет снять историю без лишних дублей."
+                },
+                {
+                    role: "Звукорежиссёр",
+                    desc: "Записывает и сводит чистый звук: от диалогов до фоновой атмосферы площадки."
+                },
+                {
+                    role: "Режиссёр монтажа",
+                    desc: "Собирает историю в финальный продукт, задаёт ритм и динамику повествования."
+                },
+                {
+                    role: "Продакшн-менеджер",
+                    desc: "Организует процесс: от брифа и сметы до сдачи проекта точно в срок."
+                }
+            ]
+        },
+        process: {
+            title1: "Как мы",
+            title2: "работаем",
+            desc: "Разложили процесс по направлениям: от первого брифа до сдачи проекта.",
+            items: [
+                {
+                    title: "Видеопроизводство",
+                    steps: [
+                        {
+                            title: "Бриф и концепция",
+                            text: "Разбираем задачу, бренд и аудиторию. Готовим идею, сценарий и визуальное решение."
+                        },
+                        {
+                            title: "Подготовка и смета",
+                            text: "Составляем план съёмок, подбираем площадку и команду, фиксируем смету и сроки."
+                        },
+                        {
+                            title: "Съёмочный день",
+                            text: "Проводим съёмку: свет, звук, режиссура кадра, постановочные и репортажные дубли."
+                        },
+                        {
+                            title: "Постпродакшн",
+                            text: "Монтаж, цветокоррекция, звуковое оформление и графика. Согласуем финальную версию."
+                        },
+                        {
+                            title: "Сдача проекта",
+                            text: "Передаём исходники и адаптивы для соцсетей, ТВ и стриминга."
+                        }
+                    ]
+                },
+                {
+                    title: "Live-трансляции",
+                    steps: [
+                        {
+                            title: "Формат и задача",
+                            text: "Обсуждаем формат: конференция, концерт или презентация. Определяем число камер и точек выхода."
+                        },
+                        {
+                            title: "Схема и площадка",
+                            text: "Готовим схему сигналов, настраиваем связь и интернет-каналы с резервированием."
+                        },
+                        {
+                            title: "Репетиция",
+                            text: "Прогоняем переключения, свет и звук. Проверяем дублирующие каналы и схему восстановления."
+                        },
+                        {
+                            title: "Эфир",
+                            text: "Ведём трансляцию в реальном времени: операторы, режиссёр переключений, звук и техподдержка."
+                        },
+                        {
+                            title: "Запись и отчёт",
+                            text: "Отдаём запись эфира, статистику просмотров и материалы для дальнейшего использования."
+                        }
+                    ]
+                },
+                {
+                    title: "Монтаж и постпродакшн",
+                    steps: [
+                        {
+                            title: "Разбор материала",
+                            text: "Отбираем сильные дубли, систематизируем материал и намечаем структуру будущего видео."
+                        },
+                        {
+                            title: "Черновой монтаж",
+                            text: "Собираем черновик: хронология, ритм, ключевые моменты. Согласуем с заказчиком."
+                        },
+                        {
+                            title: "Цвет и звук",
+                            text: "Цветокоррекция, чистка и сведение звука, подбор музыки и звуковых эффектов."
+                        },
+                        {
+                            title: "Графика и титры",
+                            text: "Добавляем графику, титры, логотипы и динамические элементы в фирменном стиле."
+                        },
+                        {
+                            title: "Финальная версия",
+                            text: "Экспортируем в нужных форматах и адаптивах, передаём исходники проекта."
+                        }
+                    ]
+                }
+            ]
+        },
+        setReel: {
+            title1: "Шоурил",
+            title2: "площадки",
+            desc: "Так выглядит рабочая кухня: от установки света до финального дубля. Загляните за кадр.",
+            photoLabel: "Фото с площадки",
+            items: [
+                {
+                    caption: "Настройка света"
+                },
+                {
+                    caption: "Работа с камерой"
+                },
+                {
+                    caption: "Звук на площадке"
+                },
+                {
+                    caption: "Режиссёрский монитор"
+                },
+                {
+                    caption: "Съёмочный день"
+                },
+                {
+                    caption: "Прямой эфир"
+                }
+            ]
+        },
+        benefits: {
+            kicker: "Преимущества",
+            title: "Что получает заказчик",
+            items: [
+                {
+                    title: "Качественный звук",
+                    desc: "Чистая запись и сведение — идеальный звук на любой площадке."
+                },
+                {
+                    title: "Презентации для конференций",
+                    desc: "Готовые материалы, которые сразу готовы к показу на экране."
+                },
+                {
+                    title: "Продуманный кадр",
+                    desc: "Каждый ракурс выверен: композиция, свет и движение камеры."
+                },
+                {
+                    title: "Цельный эфир",
+                    desc: "Переключение, графика и звук сходятся в один готовый продукт."
+                },
+                {
+                    title: "Своя техника",
+                    desc: "Камеры, свет и звук — не нужно дополнительное оборудование."
+                },
+                {
+                    title: "Полный цикл",
+                    desc: "От идеи до финального файла — один исполнитель на всех этапах."
+                }
+            ]
+        }
     },
     showreel: {
         kicker: "Шоурум",
@@ -203,6 +373,44 @@ const ru = {
         cta: "Обсудить проект",
         close: "Закрыть"
     },
+    partners: {
+        kicker: "Партнёры",
+        title1: "Наши",
+        title2: "партнёры",
+        desc: "Бренды и компании, с которыми мы работаем вместе.",
+        logoPlaceholder: "Логотип"
+    },
+    faq: {
+        kicker: "FAQ",
+        title1: "Частые",
+        title2: "вопросы",
+        items: [
+            {
+                q: "Какие услуги оказывает студия?",
+                a: "Видеопроизводство полного цикла — от идеи и сценария до монтажа и постпродакшна, а также прямые трансляции и профессиональная фотосъёмка."
+            },
+            {
+                q: "Сколько стоит создание видеоролика?",
+                a: "Стоимость зависит от формата, длительности, количества съёмочных дней и сложности постпродакшна. После брифа подготовим смету и предложим несколько вариантов решения."
+            },
+            {
+                q: "Как проходит работа над проектом?",
+                a: "Сначала бриф и обсуждение идеи, затем сценарий и смета. Далее — съёмка, монтаж и согласование. По итогам передаём исходники и адаптивы для разных площадок."
+            },
+            {
+                q: "Сколько времени занимает проект?",
+                a: "Рекламный ролик — обычно 2–4 недели с момента утверждения технического задания. Сложные корпоративные и документальные проекты — дольше. Сроки фиксируются в договоре."
+            },
+            {
+                q: "У вас есть своё оборудование?",
+                a: "Да, мы располагаем собственным парком камер, света и звука, а также работаем с проверенными площадками для студийных съёмок и трансляций."
+            },
+            {
+                q: "Работаете ли вы с частными лицами?",
+                a: "Да, мы работаем и с брендами, и с частными заказчиками по одинаковой схеме: бриф, смета, договор и результат в оговорённый срок."
+            }
+        ]
+    },
     contact: {
         kicker: "Контакты",
         title1: "Давайте",
@@ -216,6 +424,8 @@ const ru = {
         hoursValue1: "Пн – Пт: 10:00 — 19:00",
         hoursValue2: "Сб: по договорённости",
         social: "Мы в сети",
+        copy: "Копировать адрес",
+        copied: "Скопировано",
         form: {
             kicker: "Форма обратной связи",
             name: "Имя *",
@@ -257,10 +467,13 @@ const ru = {
 const en = {
     header: {
         logo: "16/9 CREATIVE STUDIO",
+        navLabel: "Sections",
         nav: [
             "Home",
             "About",
             "Showreel",
+            "Partners",
+            "FAQ",
             "Contacts"
         ],
         ariaLogo: "Go to home",
@@ -314,7 +527,174 @@ const en = {
                 desc: "Professional editing, color grading, sound design and graphics. Your content will shine."
             }
         ],
-        imgAlt: "Camera in the studio"
+        imgAlt: "Camera in the studio",
+        team: {
+            kicker: "Team",
+            title1: "People behind",
+            title2: "the scenes",
+            desc: "Every project is made by a team of professionals. Click a role to step onto the set.",
+            photoAlt: "Photo from the set",
+            members: [
+                {
+                    role: "Director",
+                    desc: "Builds the creative concept, leads the film crew and is responsible for the meaning of every frame."
+                },
+                {
+                    role: "Camera operator",
+                    desc: "Light, composition and camera movement are his signature. Can shoot a story without extra takes."
+                },
+                {
+                    role: "Sound engineer",
+                    desc: "Records and mixes clean sound: from dialogue to the atmosphere of the set."
+                },
+                {
+                    role: "Editor",
+                    desc: "Assembles the story into the final product, setting the rhythm and pace of the narrative."
+                },
+                {
+                    role: "Production manager",
+                    desc: "Organizes the process: from brief and quote to on-time project delivery."
+                }
+            ]
+        },
+        process: {
+            title1: "How we",
+            title2: "work",
+            desc: "Breaking the process down by service — from the first brief to project delivery.",
+            items: [
+                {
+                    title: "Video production",
+                    steps: [
+                        {
+                            title: "Brief & concept",
+                            text: "We dig into the task, brand and audience. We prepare the idea, script and visual solution."
+                        },
+                        {
+                            title: "Planning & budget",
+                            text: "We build the shooting plan, pick the location and crew, and fix the quote and timeline."
+                        },
+                        {
+                            title: "Shooting day",
+                            text: "We shoot: light, sound, direction for every frame, both staged and documentary takes."
+                        },
+                        {
+                            title: "Post-production",
+                            text: "Editing, color grading, sound design and graphics. We approve the final cut."
+                        },
+                        {
+                            title: "Delivery",
+                            text: "We hand over source files and adapts for social, TV and streaming."
+                        }
+                    ]
+                },
+                {
+                    title: "Live streaming",
+                    steps: [
+                        {
+                            title: "Format & goals",
+                            text: "We discuss the format: conference, concert or presentation. We pick the camera count and output points."
+                        },
+                        {
+                            title: "Setup & venue",
+                            text: "We build the signal diagram, configure connectivity and redundant internet channels."
+                        },
+                        {
+                            title: "Rehearsal",
+                            text: "We run through camera switching, light and sound, and test recovery channels."
+                        },
+                        {
+                            title: "Live event",
+                            text: "We run the stream in real time: operators, the switcher director, sound and tech support."
+                        },
+                        {
+                            title: "Recording & report",
+                            text: "We deliver the stream recording, viewer stats and footage for future use."
+                        }
+                    ]
+                },
+                {
+                    title: "Editing & post-production",
+                    steps: [
+                        {
+                            title: "Reviewing footage",
+                            text: "We pick the strongest takes, organize the material and outline the video structure."
+                        },
+                        {
+                            title: "Rough cut",
+                            text: "We assemble a draft: chronology, rhythm, key moments. Approved with the client."
+                        },
+                        {
+                            title: "Color & sound",
+                            text: "Color grading, audio cleanup and mixing, music and sound effects selection."
+                        },
+                        {
+                            title: "Graphics & titles",
+                            text: "We add graphics, titles, logos and motion elements in the brand style."
+                        },
+                        {
+                            title: "Final cut",
+                            text: "We export in required formats and adapts, and hand over the project files."
+                        }
+                    ]
+                }
+            ]
+        },
+        setReel: {
+            title1: "On-set",
+            title2: "showreel",
+            desc: "This is how it actually looks backstage: from rigging lights to the final take. Step behind the camera.",
+            photoLabel: "Photo from the set",
+            items: [
+                {
+                    caption: "Rigging lights"
+                },
+                {
+                    caption: "Behind the camera"
+                },
+                {
+                    caption: "Sound on set"
+                },
+                {
+                    caption: "Director's monitor"
+                },
+                {
+                    caption: "Shooting day"
+                },
+                {
+                    caption: "Live broadcast"
+                }
+            ]
+        },
+        benefits: {
+            kicker: "Benefits",
+            title: "What the client gets",
+            items: [
+                {
+                    title: "Quality sound",
+                    desc: "Clean recording and mixing — perfect sound in any venue."
+                },
+                {
+                    title: "Presentation-ready",
+                    desc: "Materials ready to show on screen at any conference or event."
+                },
+                {
+                    title: "Thought-out framing",
+                    desc: "Every angle is precise: composition, light and camera movement."
+                },
+                {
+                    title: "Unified broadcast",
+                    desc: "Switching, graphics and sound merge into one polished product."
+                },
+                {
+                    title: "Own equipment",
+                    desc: "Cameras, lighting and sound — no extra gear to rent."
+                },
+                {
+                    title: "Full cycle",
+                    desc: "From idea to final file — one provider for every stage."
+                }
+            ]
+        }
     },
     showreel: {
         kicker: "Showreel",
@@ -360,6 +740,44 @@ const en = {
         cta: "Discuss a project",
         close: "Close"
     },
+    partners: {
+        kicker: "Partners",
+        title1: "Our",
+        title2: "partners",
+        desc: "Brands and companies we work with.",
+        logoPlaceholder: "Logo"
+    },
+    faq: {
+        kicker: "FAQ",
+        title1: "Frequently asked",
+        title2: "questions",
+        items: [
+            {
+                q: "What services does the studio provide?",
+                a: "Full-cycle video production — from idea and script to editing and post-production, as well as live streaming and professional photography."
+            },
+            {
+                q: "How much does a video cost?",
+                a: "The price depends on format, length, number of shooting days and post-production complexity. After a brief we prepare a quote and offer several options."
+            },
+            {
+                q: "How does a project work?",
+                a: "First a brief and idea discussion, then a script and quote. Then shooting, editing and approval. Finally you receive source files and adapts for different platforms."
+            },
+            {
+                q: "How long does a project take?",
+                a: "A commercial usually takes 2–4 weeks from the approved brief. Complex corporate and documentary projects take longer. Deadlines are fixed in the contract."
+            },
+            {
+                q: "Do you have your own equipment?",
+                a: "Yes, we have our own fleet of cameras, lighting and sound, plus reliable venues for studio shooting and broadcasts."
+            },
+            {
+                q: "Do you work with individuals?",
+                a: "Yes, we work with both brands and private clients using the same flow: brief, quote, contract and a result delivered on time."
+            }
+        ]
+    },
     contact: {
         kicker: "Contacts",
         title1: "Let's",
@@ -373,6 +791,8 @@ const en = {
         hoursValue1: "Mon – Fri: 10:00 — 19:00",
         hoursValue2: "Sat: by appointment",
         social: "Follow us",
+        copy: "Copy address",
+        copied: "Copied",
         form: {
             kicker: "Contact form",
             name: "Name *",

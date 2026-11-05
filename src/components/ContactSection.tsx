@@ -158,10 +158,10 @@ export default function ContactSection() {
                   {t.contact.phone}
                 </p>
                 <a
-                  href="tel:+79001234567"
+                  href="tel:+79055090558"
                   className="group inline-flex items-center gap-2 text-lg text-zinc-300 hover:text-white transition-colors duration-200 font-light"
                 >
-                  +7 (900) 123-45-67
+                  +7 (905) 509-05-58
                   <svg
                     className="w-4 h-4 text-zinc-500 group-hover:text-zinc-300 transition-colors duration-200"
                     fill="none"
